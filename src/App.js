@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Sidebar from './components/Sidebar';
+import Main from './components/Main';
+import Art from './components/Art';
+import Code from './components/Code';
+import Game from './components/Game';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Router>
+        {/* Always render the Sidebar */}
+        <Route pat="/" component={Sidebar} />
+
+        {/* Other components */}
+        <Route path="/" exact component={Main} /> 
+        <Route path="/games/" component={Game} />
+        <Route path="/art/" component={Art} /> 
+        <Route path="/code/" component={Code} />
+      </Router>
     </div>
   );
 }
+
+ReactDOM.render(<App />, document.querySelector('#root'));
 
 export default App;

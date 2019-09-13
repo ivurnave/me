@@ -1,13 +1,147 @@
+html {
+  height: 100%;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  background-color: rgb(248, 237, 237);
+}
+
+.container {
+  margin: auto;
+  margin-top: 40px;
+  max-width: 900px;
+  font-family: 'Source Code Pro', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  font-size: 18px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+h1 {
+  color: #1C213F;
+  font-size: 80px;
+  margin: 0px;
+}
+
+h2 {
+  margin: 10px;
+  font-size: 18pt;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sidebar {
+  width: 200px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+  margin: 10px;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  height: 100px;
+}
+
+.header > img {
+  width: 100px;
+  margin-left: 30px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.content-column {
+  margin: 20px;
+  width: 400px;
+}
+
+.content-column-single {
+  margin: 20px;
+}
+
+.block {
+  height: 10px;
+  width: 40px;
+}
+
+.logo-row {
+  align-items: center;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.yellow-bg {
+  background-color: #F3B900;
+}
+
+.blue-bg {
+  background-color: #313A87;
+}
+
+.coral-bg {
+  background-color: #F5534F;
+}
+
+.green-bg {
+  background-color: green;
+}
+
+.white-bg {
+  background-color: white;
+}
+
+.header-decoration {
+  display: flex;
+  margin-right: 30px;
+  align-items: flex-start;
+}
+
+.clickableText {
+  cursor: pointer;
+}
+
+.clickableText:hover {
+  text-decoration: underline;
+  color: #F3B900;
+}
+
+.artLinks {
+  color: #313A87;
+}
+
+/* Color Theme Swatches in Hex */
+.dark-blue { color: #1C213F; }
+.green { color: green; }
+.blue { color: #313A87; }
+.yellow { color: #F3B900; }
+.dark-yellow { color: #bd9309; }
+.coral { color: #F5534F; }
+/* .white { color: #F8E9E9; } */
+.white { color: white; }
