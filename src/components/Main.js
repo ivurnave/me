@@ -66,8 +66,8 @@ class Main extends React.Component {
                         <br/><br/>
                         <em>drawing, programming, collaborating, having fun.</em>
                         <br/><br/>
-                        I've made games about snail jousting, dorm-room jam sessions, and face-contorting 
-                        simulations. <a className="clickableText green" onClick={() => this.navigate('/games')}>Take a look!</a> 
+                        I've made games about snail jousting, dorm-room jam sessions, and face-contorting
+                        simulations. <a className="clickableText green" onClick={() => this.navigate('/games')}>Take a look!</a>
                     </div>
                     <div className="content-column">
                         <img src={faces} height={imageSize} width={imageSize}/>
@@ -79,14 +79,28 @@ class Main extends React.Component {
                     </div>
                     <div className="content-column">
                     <b className="coral-bg white">I make art:</b>
+                    <br/><br/>
+                    Making art is therapy, a skill, and a way to express myself. It's something that helps me
+                    see how I have changed over time.
+                    <br/><br/>
+                    I use a lot of different mediums (pencil, pen, watercolor, acrylic, oil, digital),
+                    and I love trying new ones! <a className="clickableText coral" onClick={() => this.navigate('/art')}>Take a look!</a>
                     </div>
                 </div>
                 <div className="row">
                     <div className="content-column">
-
+                        <b className="blue-bg white">I make code:</b>
+                        <br/><br/>
+                        I find solving problems satisfying, and coding is problem solving in concentrated form.
+                        It also requires a certain amount of creativity and collaboration, leading to moments of teamwork
+                        that I find really fulfilling.
+                        <br/><br/>
+                        In addition to working as a software developer doing projects for employers,
+                        I am proud of a few personal/school project, which you can
+                        explore <a className="clickableText blue" onClick={() => this.navigate('/games')}>here!</a>
                     </div>
                     <div className="content-column">
-
+                        <img src={faces} height={imageSize} width={imageSize}/>
                     </div>
                 </div>
               </div>
