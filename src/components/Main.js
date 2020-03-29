@@ -15,9 +15,10 @@ class Main extends React.Component {
         this.props.history.push(route);
     }
 
+    imageSize = 350;
+    iconSize = 20;
+
     render () {
-        let imageSize = 350;
-        let iconSize = 20;
         return (
             <div className="main">
               <div className="header">
@@ -26,7 +27,7 @@ class Main extends React.Component {
               <div className="content">
                 <div className="row">
                     <div className="content-column">
-                        <img src={cube} height={imageSize} width={imageSize}/>
+                        <img src={cube} height={this.imageSize} width={this.imageSize}/>
                     </div>
                     <div className="content-column">
                         <b className="yellow-bg white">hey!</b>
@@ -41,19 +42,19 @@ class Main extends React.Component {
                         <br/><br/>
                         <div className="logo-row">
                             <a href="mailto:ivur.nave@gmail.com" target="_blank">
-                                <img className="logo" src={mail} height={iconSize} width={iconSize}/>
+                                <img className="logo" src={mail} height={this.iconSize} width={this.iconSize}/>
                             </a>
                             <a href="https://www.linkedin.com/in/evan-holmes-4b108760/" target="_blankb1cycl3=
                             ">
-                                <img className="logo" src={linkedin} height={iconSize} width={iconSize}/>
+                                <img className="logo" src={linkedin} height={this.iconSize} width={this.iconSize}/>
                             </a>
                             <a href="https://github.com/ivurnave" target="_blankb1cycl3=
                             ">
-                                <img className="logo" src={github} height={iconSize} width={iconSize}/>
+                                <img className="logo" src={github} height={this.iconSize} width={this.iconSize}/>
                             </a>
                             <a href="https://ivurnave.itch.io/" target="_blankb1cycl3=
                             ">
-                                <img className="logo" src={itch} height={iconSize} width={iconSize}/>
+                                <img className="logo" src={itch} height={this.iconSize} width={this.iconSize}/>
                             </a>
                         </div>
                     </div>
@@ -70,12 +71,12 @@ class Main extends React.Component {
                         simulations. <a className="clickableText green" onClick={() => this.navigate('/games')}>Take a look!</a> 
                     </div>
                     <div className="content-column">
-                        <img src={faces} height={imageSize} width={imageSize}/>
+                        <img src={faces} height={this.imageSize} width={this.imageSize}/>
                     </div>
                 </div>
                 <div className="row">
                     <div className="content-column">
-                        <img src={wiggle} height={imageSize} width={imageSize}/>
+                        <img src={wiggle} height={this.imageSize} width={this.imageSize}/>
                     </div>
                     <div className="content-column">
                     <b className="coral-bg white">I make art:</b>

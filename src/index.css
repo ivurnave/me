@@ -51,6 +51,20 @@ h2 {
   height: 100%;
   margin: 10px;
   flex-direction: column;
+  animation-name: testAnim;
+  animation-duration: .4s;
+  animation-iteration-count: 1; /* how many times the animation will play */
+}
+
+@keyframes testAnim {
+    0% {
+      transform: translateX(30%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
 }
 
 .header {
@@ -134,6 +148,100 @@ h2 {
 
 .artLinks {
   color: #313A87;
+}
+
+.gallery-image {
+  /* min-width: 100%; */
+  /* min-height: 100%; */
+  /* max-height: 100%; */
+  /* height: auto; */
+  max-width: 100%;
+  
+  /* transform: scale(1); */
+  filter: grayscale(100%);
+  transition: .6s;
+  transform-origin: center;
+}
+
+.gallery-image:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+
+.gallery-image-container {
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: -100%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* transition: top 0.4s, opacity 0.4s, transform 0.4s; */
+  transition: opacity 0.3s;
+  transition-timing-function: ease-in;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.modal.show {
+  top: 0;
+  opacity: 1;
+  /* transform: translate(-50%, 0); */
+  transition: opacity 0.3s;
+  transition-timing-function: ease-in;
+  /* transition: opacity 0.4s, transform 0.4s; */
+}
+
+.modal.hide {
+  top: -100%;
+  opacity: 0;
+  /* transform: translate(-40%, 0); */
+  transition: opacity 0.3s;
+  transition-timing-function: ease-in;
+}
+
+
+.modal_content {
+  background-color: rgb(248, 237, 237);;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  padding: 20px;
+  margin: 30px;
+  overflow: hidden;
+  border-radius: 5px;
+  transform: translate(50%, 0);
+  transition-timing-function: ease-in;
+  transition: transform 0.3s;
+}
+
+.modal_content.show {
+  transform: translate(0, 0);
+}
+
+.modal_row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+
+.modal_image {
+  height: 90%;
 }
 
 /* Color Theme Swatches in Hex */
