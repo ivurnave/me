@@ -1,9 +1,12 @@
 import React from 'react';
 import PopUp from './Popup';
-import hungary from '../images/hungary3.JPG';
-import shapes from '../images/shapes.jpeg';
-import selfie from '../images/SelfieCIS2.jpg';
-import clutter from '../images/clutterDesk.jpeg';
+
+// here I'm importing all images from the 'images' directory
+// I should update this to specify a directory that just holds the gallery images
+function importAll(r) {
+  return r.keys().map(r);
+}
+const images = importAll(require.context('../images', false, /\.(png|jpe?g|svg)$/))
 
 
 
@@ -13,8 +16,11 @@ class Art extends React.Component {
       this.state = {
         seen: false,
         showPopup: false,
-        selectedImage: null
+        selectedImage: null,
+        galleryGrid: this.createGalleryGrid(images),
       }
+
+      
   }
 
   imageSize = 350;
@@ -24,15 +30,38 @@ class Art extends React.Component {
   }
 
   togglePop = (image) => {
-    // debugger;
     this.setState({
-    //  seen: !this.state.seen
       showPopup: !this.state.showPopup,
       selectedImage: image
     });
   }
 
+  createGalleryRow = (images) => {
+    return (<div className="row">
+      {images.map((image, index) => (
+        <div className="content-column">
+          <div className="gallery-image-container">
+            <img className="gallery-image" src={image} onClick={() => this.togglePop(image)}/>
+          </div>
+        </div>
+      ))}
+    </div>);
+  };
+
+  createGalleryGrid = (images) => {
+    let rows = [];
+    for (let i=0; i<images.length; i+=2) {
+      let row = this.createGalleryRow([images[i], images[i+1]]);
+      rows.push(row);
+    }
+    let ret = (<div className="content">
+      {rows}
+    </div>)
+    return ret;
+  };
+
   render() {
+
     return (
       <div className="main">
         <PopUp image={this.state.selectedImage} show={this.state.showPopup} toggle={this.togglePop} />
@@ -41,7 +70,7 @@ class Art extends React.Component {
         </div>
         <div className="content">
           <div className="row">
-            <div className="content-column-single">
+            {/* <div className="content-column-single">
               <h2><em>why art?</em></h2>
               Learning to draw taught me a lot about myself. I saw that the more I repeatedly attempted to draw faces,
               I would slowly improve my technique. Eventually I saw progress, which emboldened me to keep trying
@@ -50,35 +79,10 @@ class Art extends React.Component {
               <br></br>
               Art is also fun. Making things with my hands is satisfying and therapeutic. Seeing, holding, and giving my creations
               to others makes me feel grounded.
-            </div>
+            </div> */}
           </div>
         </div>
-        <div className="content">
-          <div className="row">
-            <div className="content-column">
-              <div className="gallery-image-container">
-                <img className="gallery-image" src={hungary} onClick={() => this.togglePop(hungary)}/>
-              </div>
-            </div>
-            <div className="content-column">
-              <div className="gallery-image-container">
-                <img className="gallery-image" src={shapes} onClick={() => this.togglePop(shapes)}/>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="content-column">
-              <div className="gallery-image-container">
-                <img className="gallery-image" src={selfie} onClick={() => this.togglePop(selfie)}/>
-              </div>
-            </div>
-            <div className="content-column">
-              <div className="gallery-image-container">
-                <img className="gallery-image" src={clutter} onClick={() => this.togglePop(clutter)}/>
-              </div>
-            </div>
-          </div>
-        </div>
+        {this.state.galleryGrid}
       </div>
     )
   }

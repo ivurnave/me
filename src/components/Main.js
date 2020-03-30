@@ -101,7 +101,7 @@ class Main extends React.Component {
                         explore <a className="clickableText blue" onClick={() => this.navigate('/games')}>here!</a>
                     </div>
                     <div className="content-column">
-                        <img src={faces} height={imageSize} width={imageSize}/>
+                        <img src={faces} height={this.imageSize} width={this.imageSize}/>
                     </div>
                 </div>
               </div>

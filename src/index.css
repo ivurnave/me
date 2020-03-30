@@ -244,6 +244,9 @@ h2 {
   height: 90%;
 }
 
+.close {
+  cursor: pointer;
+}
 /* Color Theme Swatches in Hex */
 .dark-blue { color: #1C213F; }
 .green { color: green; }
