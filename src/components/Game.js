@@ -2,7 +2,8 @@ import React from 'react';
 import floatman from '../images/float-man.png'
 import faces from '../images/faces.png';
 import thisIsBig from '../images/this-is-big.png';
-import smileSim from '../images/smile-sim.png';
+// import smileSim from '../images/smile-sim.png';
+import smileSim from '../images/smile-sim-crop.png'
 import snail from '../images/snail1.png';
 
 
@@ -25,12 +26,12 @@ class Game extends React.Component {
         </div>
         <div className="content">
           <div className="row">
-            <div className="content-column-single">
+            {/* <div className="content-column-single">
               <h2><em>why games?</em></h2>
               I've always been fascinated with how games can be designed to make us feel stronger, faster, weaker, fearful, exhilerated, etc.
               I make games for fun to explore how different mechanincs can elicit specific experiences for the user.
               Many of my games crowd two or more players around a single keyboard to bring players close physically while they engage digitally.
-            </div>
+            </div> */}
           </div>
           <div className="row">
             <div className="content-column">
@@ -49,16 +50,20 @@ class Game extends React.Component {
             </div>
           </div>
           <div className="row">
-                <div className="content-column">
+            <div className="content-column">
 
-                {/* <br/><br/> */}
-                {/* <a href="https://anyanwu.itch.io/smile-simulator" target="_blank" >
-                  <img src = {smileSim} alt="smile simulator game" width={900} />
-                </a> */}
-                <h2><em>smile simulator</em></h2>
-                Control different areas of the face and give 'em your best smile! This game was developed in 24 hours alongside my cohort for the final
-                project of the Glitch.MN immersion program in 2016, a crash-course on how to make games and survive in the industry. Created in Unity.
-                
+              {/* <br/><br/> */}
+              {/* <a href="https://anyanwu.itch.io/smile-simulator" target="_blank" >
+                <img src = {smileSim} alt="smile simulator game" width={900} />
+              </a> */}
+              <h2><em>smile simulator</em></h2>
+              Control different areas of the face and give 'em your best smile! This game was developed in 24 hours alongside my cohort for the final
+              project of the Glitch.MN immersion program in 2016, a crash-course on how to make games and survive in the industry. Created in Unity.
+            </div>
+            <div className="content-column gallery-image-container">
+              <a href="https://anyanwu.itch.io/smile-simulator" target="_blank">
+                <img src={smileSim} width={this.imageSize}/>
+              </a>
             </div>
           </div>
         </div>

@@ -5,6 +5,20 @@ export default class PopUp extends Component {
         super(props);
     }
 
+    escFunction = () => {
+        if (this.props.image != null) {
+            this.props.toggle();
+        }
+    }
+
+    componentDidMount() {
+        document.addEventListener("keydown", this.escFunction, false);
+    }
+
+    componentWillUnmount(){
+        document.removeEventListener("keydown", this.escFunction, false);
+      }
+
     render() {
         return (
             <div className={this.props.show ? 'modal show' : 'modal'}>

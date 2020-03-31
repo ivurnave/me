@@ -6,9 +6,9 @@ import PopUp from './Popup';
 function importAll(r) {
   return r.keys().map(r);
 }
-const images = importAll(require.context('../images', false, /\.(png|jpe?g|svg)$/))
-
-
+const traditionalImages = importAll(require.context('../images/gallery/traditional', false, /\.(png|jpe?g|svg)$/))
+const designImages = importAll(require.context('../images/gallery/design', false, /\.(png|jpe?g|svg)$/))
+const digitalImages = importAll(require.context('../images/gallery/digital', false, /\.(png|jpe?g|svg)$/))
 
 class Art extends React.Component {
   constructor(props) {
@@ -17,7 +17,9 @@ class Art extends React.Component {
         seen: false,
         showPopup: false,
         selectedImage: null,
-        galleryGrid: this.createGalleryGrid(images),
+        traditionalImagesGrid: this.createGalleryGrid(traditionalImages),
+        designImagesGrid: this.createGalleryGrid(designImages),
+        digitalImagesGrid: this.createGalleryGrid(digitalImages),
       }
 
       
@@ -37,9 +39,9 @@ class Art extends React.Component {
   }
 
   createGalleryRow = (images) => {
-    return (<div className="row">
+    return (<div className="row" key={images[0]}>
       {images.map((image, index) => (
-        <div className="content-column">
+        <div className="content-column" key={index}>
           <div className="gallery-image-container">
             <img className="gallery-image" src={image} onClick={() => this.togglePop(image)}/>
           </div>
@@ -68,21 +70,14 @@ class Art extends React.Component {
         <div className="header">
           <h1>art</h1>
         </div>
-        <div className="content">
-          <div className="row">
-            {/* <div className="content-column-single">
-              <h2><em>why art?</em></h2>
-              Learning to draw taught me a lot about myself. I saw that the more I repeatedly attempted to draw faces,
-              I would slowly improve my technique. Eventually I saw progress, which emboldened me to keep trying
-              new techinques and mediums. When I reflect back on where I started, I find it reassuring that I was able to improve.
-              I find that this strategy has helped me learned many new things, and I can thank art for that.
-              <br></br>
-              Art is also fun. Making things with my hands is satisfying and therapeutic. Seeing, holding, and giving my creations
-              to others makes me feel grounded.
-            </div> */}
-          </div>
-        </div>
-        {this.state.galleryGrid}
+        <h2>traditional</h2>
+        {this.state.traditionalImagesGrid}
+
+        <h2>design</h2>
+        {this.state.designImagesGrid}
+
+        <h2>digital</h2>
+        {this.state.digitalImagesGrid}
       </div>
     )
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import floatman from '../images/float-man.png'
 import faces from '../images/faces.png';
-
+import triangulatorExample from '../images/triangulator-example.png';
 
 class Code extends React.Component {
   constructor(props) {
@@ -12,6 +12,8 @@ class Code extends React.Component {
     this.props.history.push(route);
   }
 
+  imageSize = 600;
+
   render() {
     return (
       <div className="main">
@@ -21,11 +23,7 @@ class Code extends React.Component {
         <div className="content">
           <div className="row">
             <div className="content-column-single">
-                  hello this is the code page
-                  <br/><br/>
                   <h2>triangulate</h2>
-                  <a href="https://github.com/ivurnave/image-triangulation-js" target="_blank">
-                  </a>
                   <p>
                     Triangulate images using the Delauney triangulation of placed vertices. Written with JavaScript using Electron, p5.js, and Delaunator.
                   </p>
@@ -36,9 +34,12 @@ class Code extends React.Component {
                     to form a triangulation of the full set of points. For each triangular region,
                     we color the region based on the average of the colors inside the region.
                     In the end, we get an altered image with some cool abstracted effects!
-
-                    // add some example images
                   </p>
+                  <div className="content">
+                    <a href="https://github.com/ivurnave/image-triangulation-js" target="_blank">
+                      <img src={triangulatorExample} width={this.imageSize}/>
+                    </a>
+                  </div>
 
                   <br/><br/>
                   <h2>react native gesture recognizer</h2>
