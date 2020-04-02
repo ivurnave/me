@@ -1,5 +1,5 @@
 # React App on GitHub Pages
-[View the app!](https://ivurnave.github.io/react-gh-pages)
+[View the app!](https://ivurnave.github.io/me)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
