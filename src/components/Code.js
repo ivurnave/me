@@ -28,7 +28,7 @@ class Code extends React.Component {
                     Triangulate images using the Delauney triangulation of placed vertices. Written with JavaScript using Electron, p5.js, and Delaunator.
                   </p>
                   <p>
-                    This app was written for a final project in my computational geometry
+                    This app was made for a final project in my computational geometry
                     class. Given a set of points on an image, we use a divide and conquer algorithm to
                     construct Delauney triangulations of subsets, then recursively merge the subsets
                     to form a triangulation of the full set of points. For each triangular region,
@@ -44,16 +44,17 @@ class Code extends React.Component {
                   <br/><br/>
                   <h2>react native gesture recognizer</h2>
                   <p>
-                    An npm library used to for training and recognizing
-                    touch gestures in react native applications. This project made by
-                    Bidit Sharma, Bridget Koehler, and for our senior CS capstone class at St. Olaf College.
+                    An npm library used for training and recognizing
+                    touch gestures in react native applications. This work was done alongside
+                    Bidit Sharma and Bridget Koehler for our senior CS capstone class at St. Olaf College.
                   </p>
                   <p>
-                    This library a custom implementation of the Rubine algorithm, which classifies
+                    The library features a custom implementation of the Rubine algorithm, which classifies
                     gestures using a set of predefined features such as initial
-                    angle, angle of bounding box diagonal, and . To classify a new gesture,
-                    we plot its features in multidimensional space, then compare to
-                    our defined gestures using a metric.
+                    angle, angle of bounding box diagonal, and other trigonometric properties of the 
+                    path. To classify a new gesture,
+                    we plot its features in multidimensional space and then compare those values to
+                    our defined gestures using a distance metric.
                   </p>
               </div>
           </div>

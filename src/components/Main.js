@@ -44,16 +44,13 @@ class Main extends React.Component {
                             <a href="mailto:ivur.nave@gmail.com" target="_blank">
                                 <img className="logo" src={mail} height={this.iconSize} width={this.iconSize}/>
                             </a>
-                            <a href="https://www.linkedin.com/in/evan-holmes-4b108760/" target="_blankb1cycl3=
-                            ">
+                            <a href="https://www.linkedin.com/in/evan-holmes-4b108760/" target="_blank=">
                                 <img className="logo" src={linkedin} height={this.iconSize} width={this.iconSize}/>
                             </a>
-                            <a href="https://github.com/ivurnave" target="_blankb1cycl3=
-                            ">
+                            <a href="https://github.com/ivurnave" target="_blank=">
                                 <img className="logo" src={github} height={this.iconSize} width={this.iconSize}/>
                             </a>
-                            <a href="https://ivurnave.itch.io/" target="_blankb1cycl3=
-                            ">
+                            <a href="https://ivurnave.itch.io/" target="_blank=">
                                 <img className="logo" src={itch} height={this.iconSize} width={this.iconSize}/>
                             </a>
                         </div>
@@ -97,7 +94,7 @@ class Main extends React.Component {
                         that I find really fulfilling.
                         <br/><br/>
                         In addition to working as a software developer doing projects for employers,
-                        I am proud of a few personal/school project, which you can
+                        I am proud of a few personal/school projects, which you can
                         explore <a className="clickableText blue" onClick={() => this.navigate('/games')}>here!</a>
                     </div>
                     <div className="content-column">
