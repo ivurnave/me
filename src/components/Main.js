@@ -32,9 +32,9 @@ class Main extends React.Component {
                     <div className="content-column">
                         <b className="yellow-bg white">hey!</b>
                         <br/><br/>
-                        Software Developer @ Epic Systems
+                        Frontent Developer @ Cludo
                         <br/>
-                        Madison, WI
+                        Minneapolis, MN
                         <br/><br/>
                         I make games, art, and code.
                         <br/><br/>
