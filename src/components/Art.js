@@ -41,10 +41,8 @@ class Art extends React.Component {
   createGalleryRow = (images) => {
     return (<div className="row" key={images[0]}>
       {images.map((image, index) => (
-        <div className="content-column" key={index}>
-          <div className="gallery-image-container">
+        <div className="gallery-image-container">
             <img className="gallery-image" src={image} onClick={() => this.togglePop(image)}/>
-          </div>
         </div>
       ))}
     </div>);
@@ -53,7 +51,10 @@ class Art extends React.Component {
   createGalleryGrid = (images) => {
     let rows = [];
     for (let i=0; i<images.length; i+=2) {
-      let row = this.createGalleryRow([images[i], images[i+1]]);
+      let rowImgs = [];
+      if (images[i]) {rowImgs.push(images[i])}
+      if (images[i+1]) {rowImgs.push(images[i+1])}
+      let row = this.createGalleryRow(rowImgs);
       rows.push(row);
     }
     let ret = (<div className="content">
