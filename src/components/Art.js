@@ -1,8 +1,7 @@
 import React from 'react';
 import PopUp from './Popup';
 
-// here I'm importing all images from the 'images' directory
-// I should update this to specify a directory that just holds the gallery images
+// Import all images from the 'images' directory
 function importAll(r) {
   return r.keys().map(r);
 }

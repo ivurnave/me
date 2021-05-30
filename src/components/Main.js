@@ -21,15 +21,15 @@ class Main extends React.Component {
     render () {
         return (
             <div className="main">
-              <div className="header">
+              <div className="d-flex mb-4">
                   <h1 className="dark-blue">evan holmes</h1>
               </div>
               <div className="content">
-                <div className="row">
-                    <div className="content-column">
+                <div className="row mb-4">
+                    <div className="col-md col-12 mb-4 text-center">
                         <img src={cube} height={this.imageSize} width={this.imageSize}/>
                     </div>
-                    <div className="content-column">
+                    <div className="col-md col-12 text-justify">
                         <b className="yellow-bg white">hey!</b>
                         <br/><br/>
                         Frontent Developer @ Cludo
@@ -56,8 +56,11 @@ class Main extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="content-column">
+                <div className="row mb-4">
+                    <div className="d-md-none col-12 mb-4 text-center">
+                        <img src={faces} height={this.imageSize} width={this.imageSize}/>
+                    </div>
+                    <div className="col-md col-12 text-justify">
                         <b className="green-bg white">I make games:</b>
                         <br/><br/>
                         I've always seen making games as the natural intersection of everything I enjoy:
@@ -65,28 +68,31 @@ class Main extends React.Component {
                         <em>drawing, programming, collaborating, having fun.</em>
                         <br/><br/>
                         I've made games about snail jousting, dorm-room jam sessions, and face-contorting
-                        simulations. <a className="clickableText green" onClick={() => this.navigate('/games')}>Take a look!</a>
+                        simulations. <span className="cursor-p green" onClick={() => this.navigate('/games')}>Take a look!</span>
                     </div>
-                    <div className="content-column">
+                    <div className="d-md-flex d-none col-md col-12 text-center ">
                         <img src={faces} height={this.imageSize} width={this.imageSize}/>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="content-column">
+                <div className="row mb-4">
+                    <div className="col-md col-12 mb-4 text-center">
                         <img src={wiggle} height={this.imageSize} width={this.imageSize}/>
                     </div>
-                    <div className="content-column">
-                    <b className="coral-bg white">I make art:</b>
-                    <br/><br/>
-                    Making art is therapy, a skill, and a way to express myself. It's something that helps me
-                    see how I have changed over time.
-                    <br/><br/>
-                    I use a lot of different mediums (pencil, pen, watercolor, acrylic, oil, digital),
-                    and I love trying new ones! <a className="clickableText coral" onClick={() => this.navigate('/art')}>Take a look!</a>
+                    <div className="col-md col-12 text-justify">
+                        <b className="coral-bg white">I make art:</b>
+                        <br/><br/>
+                        Making art is therapy, a skill, and a way to express myself. It's something that helps me
+                        see how I have changed over time.
+                        <br/><br/>
+                        I use a lot of different mediums (pencil, pen, watercolor, acrylic, oil, digital),
+                        and I love trying new ones! <span className="cursor-p coral" onClick={() => this.navigate('/art')}>Take a look!</span>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="content-column">
+                <div className="row mb-4">
+                    <div className="d-md-none col-12 mb-4 text-center">
+                        <img src={faces} height={this.imageSize} width={this.imageSize}/>
+                    </div>
+                    <div className="col-md col-12 text-justify">
                         <b className="blue-bg white">I make code:</b>
                         <br/><br/>
                         I find solving problems satisfying, and coding is problem solving in concentrated form.
@@ -95,9 +101,9 @@ class Main extends React.Component {
                         <br/><br/>
                         In addition to working as a software developer doing projects for employers,
                         I am proud of a few personal/school projects, which you can
-                        explore <a className="clickableText blue" onClick={() => this.navigate('/games')}>here!</a>
+                        explore <span className="cursor-p blue" onClick={() => this.navigate('/code')}>here!</span>
                     </div>
-                    <div className="content-column">
+                    <div className="d-md-flex d-none col-md col-12 text-center">
                         <img src={faces} height={this.imageSize} width={this.imageSize}/>
                     </div>
                 </div>
