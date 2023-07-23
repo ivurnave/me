@@ -262,3 +262,56 @@ h2 {
 .coral { color: #F5534F; }
 /* .white { color: #F8E9E9; } */
 .white { color: white; }
+
+/* For loading icon */
+.loader {
+  display: inline-block;
+  position: relative;
+  width: 65px;
+  height: 30px;
+}
+
+.loader div {
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  border-radius: 4px;
+  background: black;
+  animation: loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.loader div:nth-child(1) {
+  left: 5px;
+  animation-delay: -0.24s;
+}
+
+.loader div:nth-child(2) {
+  left: 20px;
+  animation-delay: -0.12s;
+}
+
+.loader div:nth-child(3) {
+  left: 35px;
+  animation-delay: 0;
+}
+
+.loader div:nth-child(4) {
+  left: 50px;
+  animation-delay: 0.12s;
+}
+
+@keyframes loader {
+  0%, 100% {
+      top: 5px;
+      height: 8px;
+      opacity: 0.6;
+  }
+  10%, 60% {
+      height: 14px;
+  }
+  50% {
+      top: 20px;
+      height: 8px;
+      opacity: 1;
+  }
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 // import { HashRouter as Router, Route, Link } from "react-router-dom";
@@ -7,21 +7,25 @@ import Main from './components/Main';
 import Art from './components/Art';
 import Code from './components/Code';
 import Game from './components/Game';
+import { MetroRouteChecker } from './pages/MetroRouteChecker';
 
 function App() {
   return (
-    <div className="container">
-      <Router basename={process.env.PUBLIC_URL}>
-        {/* Always render the Sidebar */}
-        <Route pat="/" component={Sidebar} />
+    <StrictMode>
+      <div className="container">
+        <Router basename={process.env.PUBLIC_URL}>
+          {/* Always render the Sidebar */}
+          <Route path="/" component={Sidebar} />
 
-        {/* Other components */}
-        <Route path="/" exact component={Main} />
-        <Route path="/games/" component={Game} />
-        <Route path="/art/" component={Art} />
-        <Route path="/code/" component={Code} />
-      </Router>
-    </div>
+          {/* Other components */}
+          <Route path="/" exact component={Main} />
+          <Route path="/games/" component={Game} />
+          <Route path="/art/" component={Art} />
+          <Route path="/code/" component={Code} />
+          <Route path="/metro/" component={MetroRouteChecker} />
+        </Router>
+      </div>
+    </StrictMode>
   );
 }
 
